@@ -12,13 +12,13 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 def main():
     # Option 1 - straightforward and understandable
     total = 0
-    for i in xrange(1, 1001):
+    for i in xrange(1, 1000):
         if i % 3 == 0 or i % 5 == 0:
             total += i
     print 'Option 1:', total
 
     # Option 2 - For a bit more "pythonic" flair using generators
-    nums = (i for i in xrange(1, 1001) if i % 3 == 0 or i % 5 == 0)
+    nums = (i for i in xrange(1, 1000) if i % 3 == 0 or i % 5 == 0)
     ans = reduce(lambda x,y: x+y, nums)
     print 'Option 2:', ans
 
